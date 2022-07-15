@@ -2,6 +2,12 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 
+//components
+import Comments from '../Comments/Comments';
+import Feeling from '../Feeling/Feeling';
+import Supported from '../Supported/Supported';
+import Understanding from '../Understanding/Understanding';
+
 function App() {
 
   return (
