@@ -1,10 +1,23 @@
+import { useDispatch } from 'react-redux';
 import {useHistory} from 'react-router-dom';
+import {useState} from 'react';
 
 function Comments() {
 
     const history = useHistory();
 
-    const handleNext = () => {
+    const dispatch = useDispatch();
+
+    const [newComment, setNewComment] = useState('');
+
+
+    const handleComment = (event) => {
+        dispatch({
+            type: 'ADD_COMMENT',
+            payload: newComment
+        })
+        console.log(newComment);
+
         history.push('/review')
     }
 
@@ -12,8 +25,8 @@ function Comments() {
     return(
         <div>
             <h1>Comments?</h1>
-            <input placeholder="Comment"></input>
-            <button onClick={handleNext} >Next</button>
+            <input onChange={event => setNewComment(event.target.value)} placeholder="Comment"></input>
+            <button onClick={handleComment} >Next</button>
         </div>
     )
 }
