@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import {useHistory} from 'react-router-dom';
 
@@ -13,10 +14,12 @@ function Review() {
     const dispatch = useDispatch();
 
     const handleNewFeedback = () => {
-        dispatch({
-            type: 'ADD_FEEDBACK',
-            payload: {feeling, understanding, support, comments}
-        })
+        axios.post('/feedback', {feeling, understanding, support, comments})
+        .then(() => {
+
+        }).catch((error) => {
+            console.log('error in POST handleFeedback', error)
+    })
         
         history.push('/thanks')
     }
