@@ -23,7 +23,7 @@ function Supported() {
 
     return(
         <div>
-            <h1>How well are you being suypported?</h1>
+            <h1>How well are you being supported?</h1>
             <input onChange={event => setNewSupport(event.target.value)} type="number" min={0} max={5}></input>
             <button onClick={handleSupported} >Next</button>
         </div>
