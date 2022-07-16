@@ -11,7 +11,7 @@ function Thanks() {
     return(
         <div>
             <h1>Thank you!</h1>
-            <button onClick={handleNext}>Submit New Feedback</button>
+            <button onClick={handleNext}>Leave New Feedback</button>
         </div>
     )
 }

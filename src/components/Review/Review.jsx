@@ -8,10 +8,12 @@ function Review() {
         history.push('/thanks')
     }
 
+
     return(
         <div>
             <h1>Review Your Feedback!</h1>
-            <button onClick={handleNext} >Next</button>
+            
+            <button onClick={handleNext} >Submit</button>
         </div>
     )
 }

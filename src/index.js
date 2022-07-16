@@ -9,7 +9,7 @@ import {Provider} from 'react-redux';
 import logger from 'redux-logger';
 
 //reducers
-const comments = (state = [], action) => {
+const comments = (state = (''), action) => {
     switch(action.type) {
         case 'ADD_COMMENT':
             return action.payload;
@@ -19,7 +19,7 @@ const comments = (state = [], action) => {
 
 }
 
-const feeling = (state = [], action) => {
+const feeling = (state = (''), action) => {
     switch(action.type) {
         case 'ADD_FEELING':
             return action.payload;
@@ -29,7 +29,7 @@ const feeling = (state = [], action) => {
 
 }
 
-const supported = (state = [], action) => {
+const supported = (state = (''), action) => {
     switch(action.type) {
         case 'ADD_SUPPORTED':
             return action.payload;
@@ -39,7 +39,7 @@ const supported = (state = [], action) => {
 
 }
 
-const understanding = (state = [], action) => {
+const understanding = (state = (''), action) => {
     switch(action.type) {
         case 'ADD_UNDERSTANDING':
             return action.payload;
