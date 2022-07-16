@@ -1,22 +1,19 @@
 import {useHistory} from 'react-router-dom';
 
-function Supported() {
+function Review() {
 
     const history = useHistory();
 
     const handleNext = () => {
-        history.push('/comments')
+        history.push('/thanks')
     }
-
 
     return(
         <div>
-            <h1>How well are you being suypported?</h1>
-            <input></input>
+            <h1>Review Your Feedback!</h1>
             <button onClick={handleNext} >Next</button>
         </div>
     )
-
 }
 
-export default Supported;
+export default Review;
