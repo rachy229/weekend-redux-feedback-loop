@@ -10,9 +10,8 @@ This application allows a user to submit feedback. They are able to navigate thr
 
 ## Screen Shot
 
-[!image](<img width="867" alt="Screen Shot 2022-07-17 at 5 17 52 PM" src="https://user-images.githubusercontent.com/97415526/179427650-b9a7a729-d1c1-4ce2-bf51-7a35f66e3ef3.png">
-)
-[!image](<img width="799" alt="Screen Shot 2022-07-17 at 12 28 40 PM" src="https://user-images.githubusercontent.com/97415526/179427715-e608aed9-4fe6-48c7-b0b7-6cf428d47a99.png">)
+<img width="867" alt="Screen Shot 2022-07-17 at 5 17 52 PM" src="https://user-images.githubusercontent.com/97415526/179427650-b9a7a729-d1c1-4ce2-bf51-7a35f66e3ef3.png">
+<img width="799" alt="Screen Shot 2022-07-17 at 12 28 40 PM" src="https://user-images.githubusercontent.com/97415526/179427715-e608aed9-4fe6-48c7-b0b7-6cf428d47a99.png">
 
 ### Prerequisites
 
