@@ -25,7 +25,7 @@ function Comments() {
     return(
         <div>
             <h1>Comments?</h1>
-            <input onChange={event => setNewComment(event.target.value)} placeholder="Comment"></input>
+            <input onChange={event => setNewComment(event.target.value)} placeholder="Optional"></input>
             <button onClick={handleComment} >Next</button>
         </div>
     )
