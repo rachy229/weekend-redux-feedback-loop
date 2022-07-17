@@ -12,19 +12,22 @@ function Supported() {
 
 
     const handleSupported = (event) => {
-        dispatch({
-            type: 'ADD_SUPPORTED',
-            payload: newSupport
-        })
-
-        history.push('/comments')
+        if (newSupport === ''){
+            alert('You gotta fill that out, bud')
+        } else {
+            dispatch({
+                type: 'ADD_SUPPORTED',
+                payload: newSupport
+            })
+            history.push('/comments')
+        }
     }
 
 
     return(
         <div>
             <h1>How well are you being supported?</h1>
-            <input onChange={event => setNewSupport(event.target.value)} type="number" min={0} max={5}></input>
+            <input placeholder='please enter a number 1-5' onChange={event => setNewSupport(event.target.value)} type="number" min={1} max={5}></input>
             <button onClick={handleSupported} >Next</button>
         </div>
     )

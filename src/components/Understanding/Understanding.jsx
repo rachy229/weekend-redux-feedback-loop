@@ -11,12 +11,15 @@ function Understanding() {
     const [newUnderstand, setNewUnderstand] = useState('');
 
     const handleUnderstanding = (event) => {
-        dispatch({
-            type: 'ADD_UNDERSTANDING',
-            payload: newUnderstand
-        })
-
-        history.push('/supported')
+        if (newUnderstand === ''){
+            alert('You gotta fill that out, bud')
+        } else {
+            dispatch({
+                type: 'ADD_UNDERSTANDING',
+                payload: newUnderstand
+            })
+            history.push('/supported')
+        }
     }
 
 
@@ -24,7 +27,7 @@ function Understanding() {
     return(
         <div>
             <h1>How well are you understanding the content?</h1>
-            <input onChange={event => setNewUnderstand(event.target.value)} type="number" min={0} max={5}></input>
+            <input placeholder='please enter a number 1-5' onChange={event => setNewUnderstand(event.target.value)} type="number" min={1} max={5}></input>
             <button onClick={handleUnderstanding} >Next</button>
         </div>
     )

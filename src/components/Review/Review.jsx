@@ -16,7 +16,7 @@ function Review() {
     const handleNewFeedback = () => {
         axios.post('/feedback', {feeling, understanding, support, comments})
         .then(() => {
-
+            console.log('POST sucessful')
         }).catch((error) => {
             console.log('error in POST handleFeedback', error)
     })
@@ -28,10 +28,10 @@ function Review() {
     return(
         <div>
             <h1>Review Your Feedback!</h1>
-            <h3>Feelings:{feeling}</h3>
-            <h3>Understanding:{understanding}</h3>
-            <h3>Supported:{support}</h3>
-            <h3>Comments:{comments}</h3>
+            <h3>Feelings: {feeling}</h3>
+            <h3>Understanding: {understanding}</h3>
+            <h3>Supported: {support}</h3>
+            <h3>Comments: {comments}</h3>
             <button onClick={handleNewFeedback} >Submit</button>
         </div>
     )
